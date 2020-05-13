@@ -13,7 +13,7 @@ public class RentalTest {
 	
 	@Before
 	public void setUp() {
-		movie = new Movie("Starwars", 12);
+		movie = new Movie("Starwars", 1);
 		rental = new Rental(movie, 13);
 	}
 
@@ -25,5 +25,10 @@ public class RentalTest {
 	@Test
 	public void getMovie() {
 		assertEquals(movie, rental.getMovie());
+	}
+	
+	@Test
+	public void getCharge() {
+		assertEquals(39.0, rental.getCharge(), 0);
 	}
 }
