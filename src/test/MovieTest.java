@@ -12,16 +12,26 @@ public class MovieTest {
 	
 	@Before
 	public void setUp() {
-		movie = new Movie("Starwars", 12);
+		movie = new Movie("Starwars", 1);
 	}
 	
 	@Test
 	public void getPriceCode() {
-		assertEquals(12, movie.getPriceCode());
+		assertEquals(1, movie.getPriceCode());
 	}
 	
 	@Test
 	public void getTitle() {
 		assertEquals("Starwars", movie.getTitle());
+	}
+	
+	@Test
+	public void getFrequentRenterPoints() {
+		assertEquals(1, movie.getFrequentRenterPoints(0));
+	}
+	
+	@Test
+	public void getCharge() {
+		assertEquals(30.0, movie.getCharge(10), 0);
 	}
 }
